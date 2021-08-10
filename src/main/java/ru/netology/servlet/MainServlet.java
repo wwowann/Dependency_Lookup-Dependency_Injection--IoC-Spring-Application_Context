@@ -55,7 +55,11 @@ public class MainServlet extends HttpServlet {
         }
         if (path.matches(ENDPOINT + "\\d+")) {
             // easy way
-            controller.getById(getId(path), resp);
+            try {
+                controller.getById(getId(path), resp);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -76,7 +80,11 @@ public class MainServlet extends HttpServlet {
         final var path = req.getRequestURI();
         if (path.matches(ENDPOINT + "\\d+")) {
             // easy way
-            controller.removeById(getId(path), resp);
+            try {
+                controller.removeById(getId(path), resp);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

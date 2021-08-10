@@ -2,33 +2,33 @@ package ru.netology.repository;
 
 import ru.netology.model.Post;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 // Stub
 public class PostRepository {
-    ConcurrentHashMap<Long, String> repositoryMap = new ConcurrentHashMap<>();
+    ConcurrentHashMap<Long, Post> repositoryMap = new ConcurrentHashMap<>();
     static long counter = 0;
 
     public List<Post> all() {
-        return Collections.emptyList();
+        return new ArrayList<>(repositoryMap.values());
     }
 
-    public Optional<Post> getById(long id) {
-        return Optional.empty();
+    public Post getById(long id) {
+        return repositoryMap.get(id);
     }
 
     public Post save(Post post) throws Exception {
         if (post.getId() == 0) {
             counter++;
-            repositoryMap.put(counter, post.getContent());
+            repositoryMap.put(counter, new Post(post.getId(), post.getContent()));
         }
 
         if (post.getId() != 0) {
             if (repositoryMap.containsKey(post.getId())) {
-                repositoryMap.put(post.getId(), post.getContent());
+                repositoryMap.put(post.getId(), new Post(post.getId(), post.getContent()));
             } else
                 throw new Exception("Такой \"id\" не существует");
         }
