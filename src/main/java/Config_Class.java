@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class Config_Class {
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Config_Class {
+
 }
