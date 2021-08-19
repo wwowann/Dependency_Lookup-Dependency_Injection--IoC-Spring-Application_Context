@@ -1,6 +1,8 @@
-/home/wwowann/Общедоступные/JavaWork/Servlets Containers/src/main/java/ru/netology/servlet/MainServlet.java
-/home/wwowann/Общедоступные/JavaWork/Servlets Containers/src/main/java/ru/netology/model/Post.java
-/home/wwowann/Общедоступные/JavaWork/Servlets Containers/src/main/java/ru/netology/exception/NotFoundException.java
-/home/wwowann/Общедоступные/JavaWork/Servlets Containers/src/main/java/ru/netology/service/PostService.java
-/home/wwowann/Общедоступные/JavaWork/Servlets Containers/src/main/java/ru/netology/controller/PostController.java
-/home/wwowann/Общедоступные/JavaWork/Servlets Containers/src/main/java/ru/netology/repository/PostRepository.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/ru/netology/servlet/MainServlet.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/Main.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/JavaConfig.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/ru/netology/exception/NotFoundException.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/ru/netology/model/Post.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/ru/netology/repository/PostRepository.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/ru/netology/service/PostService.java
+/home/wwowann/JavaWork/Servlets Containers/src/main/java/ru/netology/controller/PostController.java
