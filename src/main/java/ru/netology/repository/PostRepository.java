@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-
+@Repository
 public class PostRepository {
     ConcurrentHashMap<Long, Post> repositoryMap = new ConcurrentHashMap<>();
     static long counter = 0;

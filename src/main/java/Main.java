@@ -1,5 +1,4 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.netology.config.Config_Class;
 import ru.netology.service.PostService;
 
 public class Main {
@@ -9,7 +8,8 @@ public class Main {
         //при использовании аннотаций именем бина становится имя аннотированного класса с первой буквой в нижнем регистре
 
         //из списка пакетов, в которых нужно искать аннотированные классы получаем эти классы
-        final var context = new AnnotationConfigApplicationContext(Config_Class.class);
+        final var context = new AnnotationConfigApplicationContext("ru.netology");
+
         //получение бинов по имени класса-бина
         final var controller = context.getBean("postController");
         //получение бинов по имени класса
