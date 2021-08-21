@@ -11,12 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Configuration
 public class MainServlet extends HttpServlet {
     private PostController controller;
     private static final String ENDPOINT = "/api/posts/";
 
-    @Bean
+
     @Override
     public void init() {
         final var repository = new PostRepository();
