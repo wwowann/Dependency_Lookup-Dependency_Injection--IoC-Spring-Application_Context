@@ -1,7 +1,5 @@
 Main.class
 ru/netology/repository/PostRepository.class
-Config_Class.class
-JavaConfig.class
 ru/netology/exception/NotFoundException.class
 ru/netology/service/PostService.class
 ru/netology/servlet/MainServlet.class
