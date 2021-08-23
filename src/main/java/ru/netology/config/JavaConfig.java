@@ -1,13 +1,20 @@
 package ru.netology.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import ru.netology.controller.PostController;
 import ru.netology.repository.PostRepository;
 import ru.netology.service.PostService;
+import ru.netology.servlet.MainServlet;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Configuration
+
 public class JavaConfig {
+
 
     @Bean
     public PostController postController(PostService service) {
@@ -24,6 +31,12 @@ public class JavaConfig {
         return new PostRepository();
     }
 
+    @Bean
+    public MainServlet mainServlet(){
+        MainServlet mainServlet = new MainServlet();
+        mainServlet.init();
+        return mainServlet;
+    }
 }
 /* второй вариант создания бинов
 @Configuration
