@@ -1,26 +1,21 @@
 package ru.netology.servlet;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ru.netology.controller.PostController;
-import ru.netology.repository.PostRepository;
-import ru.netology.service.PostService;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+@Component
 public class MainServlet extends HttpServlet {
-    private PostController controller;
+
+    private final PostController controller;
     private static final String ENDPOINT = "/api/posts/";
 
-
-    @Override
-    public void init() {
-        final var context = new AnnotationConfigApplicationContext("ru.netology");
-        controller = context.getBean(PostController.class);
+    public MainServlet(PostController controller) {
+        this.controller = controller;
     }
 
     @Override

@@ -10,12 +10,12 @@ public class Main {
         //из списка пакетов, в которых нужно искать аннотированные классы получаем эти классы
         final var context = new AnnotationConfigApplicationContext("ru.netology");
 
-        //получение бинов по имени класса-бина
-        final var controller = context.getBean("postController");
-        //получение бинов по имени класса
-        final var service = context.getBean(PostService.class);
-        //по умолчанию создается лишь один объект на BeanDefinition
-        final var isSame = service ==context.getBean("postService");
+//        //получение бинов по имени класса-бина
+//        final var controller = context.getBean("postController");
+//        //получение бинов по имени класса
+//        final var service = context.getBean(PostService.class);
+//        //по умолчанию создается лишь один объект на BeanDefinition
+//        final var isSame = service ==context.getBean("postService");
 
     }
 }
