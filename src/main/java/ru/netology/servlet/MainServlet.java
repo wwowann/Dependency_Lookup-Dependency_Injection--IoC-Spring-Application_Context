@@ -14,14 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class MainServlet extends HttpServlet {
-    private PostController controller;
+    private final PostController controller;
     private static final String ENDPOINT = "/api/posts/";
 
-    @Override
-    public void init() {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(JavaConfig.class);
-        controller = context.getBean(PostController.class);
+    public MainServlet(PostController controller) {
+        this.controller = controller;
     }
 
     @Override
