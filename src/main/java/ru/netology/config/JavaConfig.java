@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class JavaConfig {
 
+
     @Bean
     public PostController postController(PostService service) {
         return new PostController(service);
@@ -31,8 +32,8 @@ public class JavaConfig {
     }
 
     @Bean
-    public MainServlet mainServlet() {
-        return new MainServlet(postController(postService(postRepository())));
+    public MainServlet mainServlet(PostController postController) {
+        return new MainServlet(postController);
     }
 }
 /* второй вариант создания бинов
